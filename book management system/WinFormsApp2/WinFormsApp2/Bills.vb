@@ -2,7 +2,7 @@
 Imports System.Text.RegularExpressions
 
 Public Class Bills
-    Dim Con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= C: \Users\afshan barlaskar\Documents\Bookshopvbdb.mdf;Integrated Security=True;Connect Timeout=30")
+    Dim Con As New SqlConnection("Data Source=LAPTOP-S33ATO1O\SQLEXPRESS;Initial Catalog=bookshop;Integrated Security=True")
     Public Property UserName As String
     Private Sub Populate()
         Con.Open()
@@ -15,7 +15,6 @@ Public Class Bills
         ds = New DataSet
         adapter.Fill(ds)
         BookdDGV.DataSource = ds.Tables(0)
-
         Con.Close()
 
 
@@ -24,6 +23,9 @@ Public Class Bills
         Populate()
         UnameLbl1.Text = UserName
     End Sub
+
+
+
     Dim key = 0, Stock = 0, i = 0, GrdTotal = 0
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
@@ -73,6 +75,9 @@ Public Class Bills
 
     End Sub
 
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
 
     Private Overloads Sub UpdateBook()
         Dim NewQty = Stock - Convert.ToInt32(QtyTb.Text)

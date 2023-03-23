@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class login
-    Dim Con As New SqlConnection("C:\USERS\AFSHAN BARLASKAR\DOCUMENTS\BOOKSHOPVBDB.MDF")
+    Dim Con As New SqlConnection("Data Source=LAPTOP-S33ATO1O\SQLEXPRESS;Initial Catalog=bookshop;Integrated Security=True")
     Dim cmd As SqlCommand
     Private Sub LoginBtn_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
         If UnameTb.Text = "" Or PasswordTb.Text = "" Then

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Books
-    Dim Con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= C: \Users\afshan barlaskar\Documents\Bookshopvbdb.mdf;Integrated Security=True;Connect Timeout=30")
+    Dim Con As New SqlConnection("Data Source=LAPTOP-S33ATO1O\SQLEXPRESS;Initial Catalog=bookshop;Integrated Security=True")
     Public Property Key As Integer
 
     Private Sub Populate()
@@ -165,5 +165,9 @@ Public Class Books
         Dim Obj = New login()
         Obj.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
     End Sub
 End Class

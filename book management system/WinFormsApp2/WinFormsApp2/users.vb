@@ -4,8 +4,8 @@ Imports System.Net.Mime.MediaTypeNames
 Imports System.Security.Cryptography
 
 Public Class users
-    Dim Con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= C: \Users\afshan barlaskar\Documents\Bookshopvbdb.mdf;Integrated Security=True;Connect Timeout=30")
-    Private Sub Populate()
+    Dim Con As New SqlConnection("Data Source=LAPTOP-S33ATO1O\SQLEXPRESS;Initial Catalog=bookshop;Integrated Security=True")
+    Public Sub Populate()
         Con.Open()
         Dim query = "select * from UserTbl"
         Dim adapter As SqlDataAdapter
@@ -18,9 +18,10 @@ Public Class users
         UserDGV.DataSource = ds.Tables(0)
 
         Con.Close()
-
-
     End Sub
+
+
+
     Private Sub Reset()
         UnameTb.Text = ""
         PhoneTb.Text = ""
@@ -146,5 +147,9 @@ Public Class users
         Dim Obj = New login()
         Obj.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
     End Sub
 End Class

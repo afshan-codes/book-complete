@@ -43,6 +43,7 @@ Partial Class Bills
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.UnameLbl1 = New System.Windows.Forms.Label()
         Me.UnameLbl = New System.Windows.Forms.Label()
         Me.BookdDGV = New System.Windows.Forms.DataGridView()
         Me.BillDGV = New System.Windows.Forms.DataGridView()
@@ -56,7 +57,6 @@ Partial Class Bills
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.UnameLbl1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -283,6 +283,15 @@ Partial Class Bills
         Me.Panel2.Size = New System.Drawing.Size(1238, 811)
         Me.Panel2.TabIndex = 3
         '
+        'UnameLbl1
+        '
+        Me.UnameLbl1.AutoSize = True
+        Me.UnameLbl1.Location = New System.Drawing.Point(22, 8)
+        Me.UnameLbl1.Name = "UnameLbl1"
+        Me.UnameLbl1.Size = New System.Drawing.Size(15, 23)
+        Me.UnameLbl1.TabIndex = 34
+        Me.UnameLbl1.Text = " "
+        '
         'UnameLbl
         '
         Me.UnameLbl.AutoSize = True
@@ -393,15 +402,6 @@ Partial Class Bills
         Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
-        '
-        'UnameLbl1
-        '
-        Me.UnameLbl1.AutoSize = True
-        Me.UnameLbl1.Location = New System.Drawing.Point(22, 8)
-        Me.UnameLbl1.Name = "UnameLbl1"
-        Me.UnameLbl1.Size = New System.Drawing.Size(15, 23)
-        Me.UnameLbl1.TabIndex = 34
-        Me.UnameLbl1.Text = " "
         '
         'Bills
         '
